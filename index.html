@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="company-name"><strong>Foodie</strong></li>
+          <div class="nav-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="carousel swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/image1.jpg" alt="Image 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/image2.jpg" alt="Image 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/image3.jpg" alt="Image 3" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </section>
+
+      <div class="info-sections">
+        <section id="about">
+          <h2>About Foodie</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            nisi est, facilisis ac tellus ac, egestas hendrerit magna. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi est,
+            facilisis ac tellus ac, egestas hendrerit magna. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Quisque nisi est, facilisis
+            ac tellus ac, egestas hendrerit magna. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Quisque nisi est, facilisis ac tellus
+            ac, egestas hendrerit magna.
+          </p>
+        </section>
+
+        <section id="contact">
+          <div class="contact-left">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@example.com"
+                required
+              />
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <p>&copy; 2024 Foodie. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

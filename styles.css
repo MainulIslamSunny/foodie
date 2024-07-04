@@ -1,0 +1,216 @@
+/* Updated Color Scheme */
+:root {
+    --primary-color: #ead8c0; /* Light Beige */
+    --secondary-color: #d1bb9e; /* Light Brown */
+    --accent-color: #a79277; /* Dark Brown */
+    --background-color: #fff2e1; /* Light Peach */
+    --text-color: #202124; /* Dark Grey */
+    --form-background: #ffffff; /* White */
+    --form-border: #dadce0; /* Light Grey */
+    --button-background: var(--secondary-color);
+    --button-hover: var(--accent-color);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+.carousel {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem; 
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: -30px; 
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff; 
+    opacity: 1;
+}
+
+.info-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+section {
+    text-align: center;
+}
+
+#about, #contact {
+    flex: 1;
+    margin: 1rem;
+}
+
+#about p {
+    text-align: justify;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    background-color: var(--form-background);
+    padding: 1rem; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--form-border);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--form-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    color: var (--text-color);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #999;
+}
+
+form button {
+    padding: 0.5rem; 
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-background);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--button-hover);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer-left {
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.footer-company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .info-sections {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #about, #contact {
+        margin: 0;
+    }
+
+    footer {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .footer-left {
+        text-align: left;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        width: 100%;
+        margin-top: 1rem; 
+    }
+}
