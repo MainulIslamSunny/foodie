@@ -28,3 +28,13 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+// Added for hamburger menu functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navRight = document.querySelector(".nav-right");
+
+    menuToggle.addEventListener("click", () => {
+        navRight.classList.toggle("show");
+    });
+});
