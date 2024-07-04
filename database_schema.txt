@@ -1,0 +1,66 @@
+Here is the database schema design for an e-commerce website, including tables for products, categories, users, orders, and order items.
+
+Tables and Relationships
+
+Categories:
+category_id (Primary Key)
+category_name
+
+
+Products:
+product_id (Primary Key)
+product_name
+category_id (Foreign Key referencing Categories)
+price
+description
+
+
+Users:
+user_id (Primary Key)
+username
+email
+password
+
+
+Orders:
+order_id (Primary Key)
+user_id (Foreign Key referencing Users)
+order_date
+status
+
+
+Order Items:
+order_item_id (Primary Key)
+order_id (Foreign Key referencing Orders)
+product_id (Foreign Key referencing Products)
+quantity
+price
+
+
+Relationships between the database schema is:
+A Category can have multiple Products.
+A Product belongs to one Category.
+A User can have multiple Orders.
+An Order belongs to one User.
+An Order can have multiple Order Items.
+An Order Item belongs to one Order and one Product.
+
+
+
+SQL Queries:
+
+1. List all products in a specific category:
+
+SELECT p.product_id, p.product_name, p.price, p.description
+FROM Products p
+JOIN Categories c ON p.category_id = c.category_id
+WHERE c.category_name = 'CategoryName';
+
+
+2. Fetch order details for a specific user
+
+SELECT o.order_id, o.order_date, o.status, oi.product_id, oi.quantity, oi.price
+FROM Orders o
+JOIN Order Items oi ON o.order_id = oi.order_id
+JOIN Users u ON o.user_id = u.user_id
+WHERE u.username = 'Username';
